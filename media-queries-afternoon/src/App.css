@@ -1,0 +1,94 @@
+body {
+background-image: url(https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg) ;
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-size: cover;
+}
+
+nav {
+  width: 100vw;
+  height: 10vh;
+}
+ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+  color:white;
+  font-size: 30px
+}
+
+.drop-down-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: 20px
+}
+
+div {
+  width: 60vw;
+}
+div > li {
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: cursive;
+  color: yellow;
+}
+img {
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+.toggle-menu, .toggle-open, .toggle-closed {
+  width: 100vw;
+  height: 50vh;
+  top: 0px;
+  position: absolute;
+  z-index: -10;
+  background-color: rgb(33,37,40)
+}
+
+.toggle-menu {
+  display: none;
+}
+
+
+
+.toggle-open {
+  animation: openMenu .5s forwards linear;
+}
+
+.toggle-closed {
+  animation: closeMenu .5s forwards linear;
+}
+
+@keyframes closeMenu {
+  from {
+      height: 50vh;
+  }
+  to {
+      height: 0vh;
+  }
+}
+
+@keyframes openMenu {
+  from {
+      height: 0vh;
+  }
+  to {
+      height: 50vh;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  img {
+      display: block;
+  }
+  .menu-text {
+      display: none;
+  }
+}
